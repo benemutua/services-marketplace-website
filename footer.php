@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://www.facebook.com/Serviceskenyacoke-101079639027518/" target="_blank" class="facebook"><i class="ri-facebook-line"></i></a>
+        <a href="" target="_blank" class="facebook"><i class="ri-facebook-line"></i></a>
         <a href="#" class="instagram"><i class="ri-instagram-line"></i></a>
         <a href="https://bit.ly/3AJQt6j" target="_blank" class="linkedin"><i class="ri-linkedin-line"></i></a>
       </div>
