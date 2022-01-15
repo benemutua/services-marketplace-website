@@ -1,0 +1,2004 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #5fcf80;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #86db9f;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #5fcf80;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+.back-to-top:hover {
+  background: #7ed899;
+  color: #fff;
+}
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #5fcf80;
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  background: #fff;
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 15px 0;
+  box-shadow: 0px 0 18px rgba(55, 66, 59, 0.08);
+}
+#header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+#header .logo a {
+  color: #5fcf80;
+}
+#header .logo img {
+  max-height: 40px;
+}
+
+/**
+* Get Startet Button 
+*/
+.get-started-btn {
+  margin-left: 22px;
+  background: #5fcf80;
+  color: #fff;
+  border-radius: 50px;
+  padding: 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 14px;
+  display: inline-block;
+}
+.get-started-btn:hover {
+  background: #3ac162;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .get-started-btn {
+    margin: 0 15px 0 0;
+    padding: 6px 18px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+}
+.account-btn{
+  padding-top:15px; 
+  padding-bottom:15px;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+.navbar li {
+  position: relative;
+}
+.navbar a, .navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #37423b;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+.navbar a i, .navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+  color: #5fcf80;
+}
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 30px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+  border-radius: 4px;
+}
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: none;
+  font-weight: 500;
+}
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+  color: #5fcf80;
+}
+.navbar .dropdown:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+.navbar .dropdown .dropdown:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+  .navbar .dropdown .dropdown:hover > ul {
+    left: -100%;
+  }
+}
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+  color: #37423b;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+.mobile-nav-toggle.bi-x {
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(32, 38, 34, 0.9);
+  transition: 0.3s;
+  z-index: 999;
+}
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  border-radius: 6px;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+.navbar-mobile a, .navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #37423b;
+}
+.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+  color: #5fcf80;
+}
+.navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
+  margin: 15px;
+}
+.navbar-mobile .dropdown ul {
+  position: static;
+  display: none;
+  margin: 10px 20px;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+.navbar-mobile .dropdown ul li {
+  min-width: 200px;
+}
+.navbar-mobile .dropdown ul a {
+  padding: 10px 20px;
+}
+.navbar-mobile .dropdown ul a i {
+  font-size: 12px;
+}
+.navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
+  color: #5fcf80;
+}
+.navbar-mobile .dropdown > .dropdown-active {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  max-width: 1310px;
+  min-height: 295px !important;
+  height: 500px;
+  margin: auto;
+  background: url("../img/nairobi-bg.png") top center;
+  background-size: cover;
+  position: relative;
+}
+
+.heroAdvDiv{/*this div will show block for the pinned note*/
+display: inline-block;
+border: 1px solid green;
+border-radius: 10px;
+padding: 10px;
+margin-right: 10px;
+width:25%;
+text-align: center;
+color: whitesmoke;
+}
+
+.heroAdvDiv span{/*pinned note span style*/
+  color:#18d26e;
+  font-weight: 300;
+  font-size: 13px; 
+}
+ 
+
+.heroAdvDiv p{/*pinned note p style*/
+  margin-top: -23px;
+  position: relative;
+  border-radius: 10px;
+  color: white;
+}
+
+.heroSearchDiv{
+  display: inline-block;
+width:73%;
+}
+
+
+
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#hero .container {
+  padding-top: 72px;
+}
+@media (max-width: 992px) { /*on mini pcs*/
+  #hero .container {
+    padding-top: 62px;
+  }
+  #hero{
+    height: 400px !important;
+  }
+  .heroAdvDiv{
+    width: 100%;
+  }
+  .heroAdvDiv p{
+    position: relative;
+    background: none;
+  }
+  .heroSearchDiv{
+    width: 100%;
+  }
+}/*end screen size checking/adjustments for 992px*/
+
+
+#hero h1 {
+  margin: 0;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 56px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+#hero h2 {
+  color: #eee;
+  margin: 10px 0 0 0;
+  font-size: 24px;
+}
+#hero .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 35px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin-top: 30px;
+  border: 1px solid #fff;
+  color: #fff;
+}
+#hero .btn-get-started:hover {
+  background: #5fcf80;
+  border: 1px solid #5fcf80;
+}
+
+@media(max-width: 600px){/*on mobile screens*/
+#hero{
+  height: 500px !important;
+}
+}/*end adjustments on mobile devices*/
+
+
+.findService{
+  width: 100%;
+  padding: 5px;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.findService input, .findService button{
+  height: 42px;
+}
+
+@media (max-width:600px){
+  .findService{
+    width:100%;
+  }
+  .findService{
+    padding: 0px;
+  }
+}
+
+
+/*========================================================
+# the input field on the hero page
+========================================================*/
+.hangingWindow{
+  width: 200px;
+  height: auto;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid gainsboro;
+  position: fixed;
+  z-index: 11;
+  background-color:white;
+  right:10px;
+  top: 90px;
+}
+.hangingWindow p{
+  font-weight: 300;
+  font-size: 15px;
+}
+.hangingWindow span{
+  position: absolute;
+  margin-top: -25px;
+  right: 1px; 
+  font-weight: bolder;
+  font-size: 35px;
+  color:#ec7063;
+  cursor: pointer;
+}
+.hangingWindow span:hover{
+  color: red;
+}
+
+
+
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 768px) {
+  #hero {
+    height: 100vh;
+  }
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+ }
+
+@media (max-width: 400px){
+  .searchField{
+    width: 100%;
+    min-width: 290px;
+    margin-left: -10px;
+    padding:0;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #f6f7f6;
+}
+
+.section-title {
+  padding-bottom: 40px;
+}
+.section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 5px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-family: "Poppins", sans-serif;
+}
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #9ae1af;
+  margin: 4px 10px;
+}
+.section-title p {
+  margin: 0;
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #37423b;
+}
+
+
+.breadcrumbs{
+  margin-top: 73px;
+  text-align: center;
+  background: #58D68D;
+  padding: 30px 0;
+  padding-bottom: 15px;
+  color: white;
+  max-width: 100%;
+  min-width: 290px;
+}
+
+/* for the fields */
+
+
+
+@media (max-width: 992px) {
+  .breadcrumbs {
+    margin-top: 63px;
+  }
+}
+
+
+
+/*=======================================================
+THE SUCCESS AND ERROR MESSAGES
+=======================================================*/
+.cast {
+  color: green;
+  background: #e9f7ef;
+  padding: 10px;
+  border: 1px solid #d5f5e3;
+  border-radius: 5px;
+  width: 97%;
+  margin: auto;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.customMessage{
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  padding: 10px;
+  width: 95%;
+  margin: auto;
+  margin-top: 10px;
+  background: ghostwhite;
+}
+
+.err {
+  color: #dc7633;
+  background: #fdf2e9;
+  padding: 10px;
+  border: 1px solid #fae5d3;
+  border-radius: 5px;
+  padding-left: 10px;
+  width: 97%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+/*========================================================
+# STYLE THE LABELS AND PLACEHOLDERS
+========================================================*/
+
+label{
+  color: #707B7C;
+  margin-left: 5px;
+}
+input::placeholder, textarea::placeholder{
+  color: #7FB3D5 !important;
+  font-size: 12px;
+}
+
+.customlabel{
+  font-size: 12px;
+}
+.inactive{/*for inactive inputs*/
+  pointer-events: none;
+}
+
+
+
+
+
+/*========================================================
+#CUSTOM SIGN IN CARD
+========================================================*/
+
+.loginCard{
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  width: 290px;
+  padding: 10px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.loginCard img{
+margin-left: 30%;
+width: 100px;
+height: 100px;
+border-radius: 50%;
+margin-top: -20%;
+}
+
+
+
+/*the index welcome messages*/
+.home-marquee-texts{
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 5px;
+  background: #dc7633;
+  color: white;
+  font-weight: 300;
+  font-size: 14px;
+  max-width: 1310px;
+  min-width: 295px;
+  width: 99%;
+}
+
+
+
+.home-welcome-main{
+min-width: 295px;
+max-width: 1310px;
+margin: auto;
+display: flex;
+margin-top: 20px;
+grid-gap: 20px;
+padding:5px;
+}
+
+.home-bg-icon-div{
+  text-align: center;
+  position: sticky;
+  display: block;
+  background: url(../img/dinning-bg.jpg) top center;
+  background-size: cover;
+  width: 52%;
+  height: 450px;
+  }
+
+.home-bg-icon-div:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+}
+.home-bg-icon-div-texts{
+  color: white;
+  position: relative;
+  padding-top: 20%;
+}
+
+.home-welcome-note{
+position: sticky;
+text-align: center;
+display: block;
+width: 46%;
+text-align: center;
+color: #A6ACAF;
+}
+
+.home-welcome-note i, .home-bg-icon-div i{
+  font-size: 50px;
+  border-radius: 50%;
+  border: 1px solid #86db9f;
+  padding: 5px;
+  position: relative;
+  margin-top: -20px;
+  color:#dc7633;
+}
+
+.home-welcome-note h5{
+  color: #27AE60;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+@media (max-width: 816px){
+  marquee{
+width: 90% !important;
+  }
+
+ .home-welcome-main{
+   display: block;
+ }
+ .home-bg-icon-div{
+  width: 100%;
+  height: auto;
+  padding-bottom: 30px;
+}
+
+.home-welcome-note{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+}
+
+/*end the welcome messages*/
+
+
+
+/*Google ads div on home page*/
+.homeGoogleAds{
+  width: 95%;
+  margin: auto;
+  padding: 10px;
+  height: 100px;
+  color: gainsboro;
+  font-family: monospace;
+}
+
+
+/*start homepage listing*/
+.sliderListingMain{
+  display: block;
+  width: 100%;
+  justify-items: center;
+}
+.sliderListingContainer{
+  display: inline-block;
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  padding: 5px;
+  width:400px;
+  margin-right: 10px;
+  height: 250px;
+}
+
+/*end the home page listing*/
+
+
+/*the services links on home and about pages*/
+.servicesPage{
+  max-width: 100%;
+  min-width: 295px;
+  margin: auto;
+  text-align: center;
+  padding-top: 20px;
+  position: sticky;
+  background: url(../img/hero-bg.jpg) top center;
+  background-size: cover;
+}
+
+.servicesPage:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.servicesPage h5{
+  color: black;
+  position: relative;
+}
+
+.servicesPageLinks{
+  width: 250px;
+  height:50px;
+  padding: 14px;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  color: gainsboro;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: cursive;
+}
+.servicesPageLinks i{
+  color:white;
+}
+
+
+
+
+
+/*-----------------------------------------------
+end styling the custom googl ads window
+-----------------------------------------------*/
+
+
+
+
+
+/*-------------------------------------------------------------
+the manage account page
+---------------------------------------------------------------*/
+.myprofilediv{
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  background: ghostwhite;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.myprofilediv h6{
+  color:#248bf5;
+  font-size: 12px !important;
+  font-weight: 200;
+}
+
+
+.myPaymentRecordsDiv{
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  overflow: auto;
+  background: ghostwhite;
+  grid-gap: 4px;
+}
+
+.smallPaymentDivs{
+  border: 1px solid #3ac162;
+  border-style: dotted;
+  border-radius: 5px;
+  min-width: 150px;
+  max-width: 150px;
+  text-align: center;
+  display:block;
+}
+
+.smallPaymentDivs p{
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  background: #27AE60;
+  border-bottom: 1px solid #3ac162;
+  border-bottom-style: dotted;
+}
+.smallPaymentDivs span{
+  color: gray;
+  font-weight: 200;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+
+.hiddenDeleteDiv{/*the hidden delete div*/
+  width: 80%;
+  margin: auto;
+  border: 1px solid #657a6d;
+  border-radius: 10px;
+  padding: 10px;
+  }
+  
+  @media (max-width: 600px){
+    .hiddenDeleteDiv{
+      width: 100%;
+    }
+  }
+
+
+
+/*--------------------------------------------------------------
+# THE IMAGE INPUT ON MANAGE ACCOUNT PAGE
+--------------------------------------------------------------*/
+.myLogoDiv{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.myLogoDiv img{
+  width: 120px;
+  height: 120px;
+  border: 1px solid #5fcf80;
+  border-radius: 50%;
+  background: url(../img/defaultimage.jpg);
+  background-size: contain;
+}
+.myLogoDiv input{
+  display: none;
+}
+.myLogoDiv label{
+  border: 2px solid #5fcf80;
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# registration divs
+--------------------------------------------------------------*/
+.registrationcard{
+  width: 80%;
+  max-width:1000px;
+    display: flex;
+  padding: 5px;
+  margin: auto;
+  grid-gap: 10px;
+}
+
+.registrationcardBlock{
+  display: block;
+  width: 49%;
+  padding: 10px;
+}
+
+.paymentsDiv{/*the payment div*/
+width: 98%;
+border: 1px solid gainsboro;
+border-style: dotted;
+border-radius: 5px;
+margin: auto;
+padding: 10px;
+padding-top: 20px; 
+margin-top: 15px;
+margin-bottom: 5px;
+}
+.paymentsDiv h5{
+  margin-top: -33px;
+  position: absolute;
+  background: white;
+  color: #5D6D7E;
+  font-size: 16px;
+  border: 1px solid gainsboro;
+  border-style: dotted;
+  padding: 3px;
+  margin-left: 10%;
+}
+.customInput{
+  background: #657a6d;
+  color: white;
+}
+
+.paymentsDiv p{
+  border: 1px solid green;
+  border-style: dashed;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  background: #657a6d;
+}
+
+
+@media (max-width: 600px){
+
+  .registrationcard{
+    display: block;
+  }
+
+  .registrationcardBlock{
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px){
+  .registrationcard{
+    width: 100%;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# THE SERVICES SECTION
+--------------------------------------------------------------*/
+.sorterMainDiv{
+  width: 98%;
+  margin: auto;
+  display: flex;
+  grid-gap: 10px;
+}
+
+.sorter{
+  border: 1px solid #ABEBC6;
+  border-radius: 10px;
+  padding: 10px;
+  width: 49%;
+  display: block;
+}
+
+.sorter h5{
+  position: absolute;
+  background: #58D68D;
+  color: white;
+  margin-top: -20px;
+  font-size: 13px;
+  margin-left:10px;
+}
+
+.flexerDiv{/*for the toggle for google location*/
+height: 38px;
+padding-top: 5px;
+border: 1px solid gainsboro;
+background: white;
+}
+
+/*make sorter responsive*/
+@media (max-width: 700px){
+.sorterMainDiv{
+display: block;
+}
+.sorter{
+  width: 100%;
+  margin-bottom: 10px;
+}
+}
+
+@media (max-width: 320px){ /*on mobiles*/
+  .sorterMainDiv{
+  width: 100% !important;
+  }
+  .sorter{
+    border: none;
+    padding:0px;
+    margin-bottom: 20px;
+  }
+  }
+/*end sorter*/
+
+
+/*--------------------------------------------------------------------------
+THE SERVICES LISTING PART
+---------------------------------------------------------------------------*/
+.bodyContainer{/*the outermost housing for the prof container and google ads*/
+max-width:1200px;
+width:90%;
+margin: auto;
+}
+.profMainParentContainer{/*the professionals parent container*/
+max-width: 750px;
+width: 100%;
+border: 1px solid #27AE60;
+display: flex;
+border-radius: 10px;
+background: ghostwhite;
+margin-bottom: 30px;
+}
+
+
+
+.profDivisionContainerOne{/*the 1st separator containers inside the main container on left*/
+width:37%;
+display: block;
+padding: 5px;
+}
+/*elements on this first container*/
+.profDivisionContainerOne img{
+  border: 1px solid #27AE60;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  margin-left:60px;
+  margin-top: -30px;
+  background: url(../img/defaultimage.jpg);
+  background-size: contain;
+}
+.containerOneInfoDiv{
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-top:65px;
+}
+/*end container one elements*/
+
+
+
+
+
+
+.profDivisionContainerTwo{/*the 2nd separator containers inside the main container on right*/
+  width:63%;
+  display: block;
+}
+/*container two elements*/
+.containerTwoHeadDiv{/* this is the container housing contacts and professional/service information*/
+  display: flex;
+  width: 100%;
+  grid-gap: 10px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  }
+  .containerTwoUpperDiv{ /*the contacts and the service info divs*/
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    padding: 10px;
+    width: 48.5%;
+    display: block;
+  }
+
+  .mySpecialBtn{/*this button will be hidden by default. when the size is of a pjhone, it will be set to display*/
+    display: none;
+    border: none;
+    padding: 7px;
+  }
+  
+  .containerTwoAboutDiv{/*houses the about/desription of the whole service*/
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  padding: 10px;
+  width: 98%;
+  margin: auto;
+  margin-bottom: 5px;
+  }
+  /*end container two elements*/
+
+/*style the texts on the professionals divs*/
+.profMainParentContainer span{/*for all texts from database except for specialization and urls*/
+  color: gray;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: capitalize;
+  }
+  
+  .profMainParentContainer span i{/*for showing the verified accounts*/
+    position: absolute;
+    color: #8E44AD;
+    font-size: 12px;
+    font-weight: 200;
+  }
+  .containerTwoUpperDiv h1{
+    font-size: 13px;
+    margin-bottom: -20px;
+    color: blue;
+    font-weight: bold;
+  }
+
+  .profMainParentContainer h6{/*for the link and location headers*/
+    color: #34495E;
+    margin-left: 0px !important;
+  }
+
+  .profMainParentContainer h5{/*for the specialization texts*/
+    color: gray;
+  font-weight: 300;
+  font-size: 13px;
+  }
+
+  .profMainParentContainer a{/*customize the urls in that container*/
+    font-weight: 200 !important;
+    font-size: 13px !important;
+  }
+
+  .profMainParentContainer p{/*on the container two part*/
+    color: #d35400;
+    margin: 1px;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  /*end styling texts*/
+
+
+
+  /*MAKE THE PART RESPONSIVE*/
+@media (max-width: 990px){/*responsiveness on a minipc*/
+  .bodyContainer{
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 764px){/*responsiveness on a tablet*/
+  .profMainParentContainer{
+    display: block;
+    height: auto;
+    max-width: 494px;
+  }
+
+  .profDivisionContainerOne img{
+    position: absolute;
+    height: 95px;
+    width: 95px;
+  }
+ .containerOneInfoDiv{
+   margin-top: 60px;
+   border: 1px solid gainsboro;
+   border-radius: 5px;
+ }
+
+  .profDivisionContainerOne, .profDivisionContainerTwo{
+    width: 100%;
+  }
+}
+
+@media (max-width: 390px){/*what happens when the size is of a phone*/
+  .containerTwoHeadDiv{
+    display: block;
+  }
+  .containerTwoUpperDiv{
+    width: 100%;
+    margin-bottom: 5px;
+  }
+.theContactInfo{/*hide the contact info div to squeze space, then show the special button*/
+  display: none;
+}
+
+.mySpecialBtn{/*now show that special toggle button to show or hide the contacts div*/
+  display: block;
+}
+
+}
+
+/*--------------------------------------------------------------------------
+END THE SERVICES LISTING PART
+---------------------------------------------------------------------------*/
+
+
+
+
+/*----------------------------------------------------------------
+the message open chat on professionals part
+----------------------------------------------------------------*/
+.messageBox{
+  position: fixed;
+  bottom: 10px;
+  left: 5px;
+  padding: 25px;
+  background-image: url(../img/message.png) !important;
+  background-size:cover;
+  z-index: 11;
+}
+
+/*the chatting area*/
+.chatArea{ /*this is the part like phone*/
+  border-radius: 7px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 2px;
+  width: 290px;
+  height: 400px;
+  position: fixed;
+  bottom: 68px;
+  left: 5px;
+  background: white;
+  border: 1px solid gainsboro;
+  border-top: 2px solid gainsboro;
+  z-index: 11;
+}
+
+.messageArea{ /* where the messages show. wuith scrollable and hidden scrollbar*/
+  width: 100%;
+  height: 320px;
+  overflow: auto;
+scroll-behavior: none;
+}
+
+.chatArea ::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.chatArea p { /*styling the conversations*/
+  border-radius: 1.15rem;
+  line-height: 1.25;
+  max-width: 75%;
+  margin-left: 15px !important;
+  padding: 0.5rem .875rem;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.chatArea p::before,
+.chatArea p::after {
+  bottom: -0.1rem;
+  content: "";
+  height: 1rem;
+  position: absolute;
+}
+
+p.from-me {
+  align-self: flex-end;
+  background-color: #248bf5;
+  color: #fff; 
+  font-weight: 300;
+  font-size: 14px;
+}
+
+p.from-me::before {
+  border-bottom-left-radius: 0.8rem 0.7rem;
+  border-right: 1rem solid #248bf5;
+  right: -0.35rem;
+  transform: translate(0, -0.1rem);
+}
+
+p.from-me::after {
+  background-color: #fff;
+  border-bottom-left-radius: 0.5rem;
+  right: -40px;
+  transform:translate(-30px, -2px);
+  width: 10px;
+}
+
+p[class^="from-"] {
+  margin: 0.5rem 0;
+  width: fit-content;
+}
+
+p.from-me ~ p.from-me {
+  margin: 0.25rem 0 0;
+}
+
+p.from-me ~ p.from-me:not(:last-child) {
+  margin: 0.25rem 0 0;
+}
+
+p.from-me ~ p.from-me:last-child {
+  margin-bottom: 0.5rem;
+}
+
+p.from-them {
+  align-items: flex-start;
+  background-color: #e5e5ea;
+  color: #000;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+p.from-them:before {
+  border-bottom-right-radius: 0.8rem 0.7rem;
+  border-left: 1rem solid #e5e5ea;
+  left: -0.35rem;
+  transform: translate(0, -0.1rem);
+}
+
+p.from-them::after {
+  background-color: #fff;
+  border-bottom-right-radius: 0.5rem;
+  left: 20px;
+  transform: translate(-30px, -2px);
+  width: 10px;
+}
+
+.chatArea span{ /*for closing chat window*/
+  color: gray;
+  right: -7px;
+  top: -20px;
+  position: absolute;
+  cursor:pointer;
+  font-size: 30px;
+}
+
+.chatArea span:hover{
+  color: red;
+}
+
+.chatArea h4{
+  font-weight: 400;
+  font-size: 14px;
+  color: #657a6d;
+  left: 10px;
+  word-wrap: break-word;
+  top: 20%;
+  position: absolute;
+}
+
+.theInput{ /*where you type the reply messaage*/
+width: 99%;
+bottom: 1px;
+position: absolute;
+}
+
+/*END THE CHATTING WINDOWS*/
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# ABOUT
+--------------------------------------------------------------*/
+.events .card {
+  border: 0;
+  padding: 0 30px;
+  margin-bottom: 0;
+  position: relative;
+  margin-top: -20px;
+}
+.events .card-img {
+  width: calc(100% + 60px);
+  margin-left: -30px;
+  overflow: hidden;
+  z-index: 9;
+  border-radius: 5px;
+  border: 1px solid gainsboro;
+}
+.events .card-img img {
+  max-width: 100%;
+  min-width: 100%;
+  height: 300px;
+  transition: all 0.3s ease-in-out;
+}
+.events .card-body {
+  z-index: 10;
+  background: #fff;
+  border-top: 4px solid #fff;
+  padding: 30px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  margin-top: -60px;
+  transition: 0.3s;
+}
+.card-body p{
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.events .card-title {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.events .card-title a {
+  color: #37423b;
+  transition: 0.3s;
+}
+.events .card-text {
+  color: #5e5e5e;
+}
+.events .read-more a {
+  color: #777777;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  transition: 0.3s;
+}
+.events .read-more a:hover {
+  color: #5fcf80;
+}
+.events .card:hover img {
+  transform: scale(1.1);
+}
+.events .card:hover .card-body {
+  border-color: #5fcf80;
+}
+.events .card:hover .card-body .card-title a {
+  color: #5fcf80;
+}
+
+
+@media (max-width: 800px){
+  .events .card-body{
+    width: 100%;
+    padding:10px;
+    margin-bottom: 30px;
+  }
+  }
+
+  @media (max-width: 600px){
+    .events .card-img {
+      height: 220px;
+    }
+
+    .events .card-img img{
+      height: 220px;
+    }
+  }
+
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact {
+  padding-top: 5px;
+}
+.contact .info {
+  width: 100%;
+  background: #fff;
+}
+.contact .info i {
+  font-size: 20px;
+  color: #5fcf80;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #ecf9f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #37423b;
+}
+.contact .info p {
+  padding: 0 0 0 60px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #657a6d;
+}
+.contact .info .email, .contact .info .phone {
+  margin-top: 40px;
+}
+.contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
+  background: #5fcf80;
+  color: #fff;
+}
+.contact .php-email-form {
+  width: 100%;
+  background: #fff;
+}
+.contact .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+.contact .php-email-form .error-message br + br {
+  margin-top: 25px;
+}
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+.contact .php-email-form input, .contact .php-email-form textarea {
+  border-radius: 4px;
+  box-shadow: none;
+  font-size: 14px;
+}
+.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
+  border-color: #5fcf80;
+}
+.contact .php-email-form input {
+  height: 44px;
+}
+.contact .php-email-form textarea {
+  padding: 10px 12px;
+}
+.contact .php-email-form button[type=submit] {
+  background: #5fcf80;
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+.contact .php-email-form button[type=submit]:hover {
+  background: #3ac162;
+}
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  color: #37423b;
+  font-size: 14px;
+  background: #eef0ef;
+  max-width: 100%;
+  min-width: 295px;
+}
+
+
+#footer .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #5fcf80;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+#footer .social-links a:hover {
+  background: #3ac162;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+
+/*========================================================
+  ADS MODAL
+  ======================================================*/
+  .modalcontainer {
+    position: absolute;
+    left: 50%;
+    margin-top: 80px;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
+    width: 80%;
+    height: auto;
+    background-color: white;
+    border: 1px solid gray;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 11;
+    }
+  
+  .overlayy {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+  }
+
+
+  .hidden {
+    display: none;
+  }
+  
+.modalParentDiv{
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  grid-gap: 10px;
+  margin: auto;
+  overflow: auto;
+}
+
+.modalInnerDiv{
+  display: block;
+  width: 49%;
+}
+
+
+
+  
+  .modalcontainer span {
+    font-size: 20px;
+    color: white;
+    border-radius: 50%;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    float: right;
+    margin-top: -40px;
+    margin-right: -30px;
+    background:#18d26e;
+  }
+  .modalcontainer span:hover {
+    color: red;
+    cursor: pointer;
+  }
+    
+  
+  /*  end of modal  */
+  
+   @media (max-width: 750px) {
+    .modalcontainer {
+      width: 95%;
+      float: left;
+    }
+  } 
+
+  @media (max-width: 500px){
+.modalParentDiv{
+  display: block;
+}
+.modalcontainer{
+  top: 90%;
+}
+.modalInnerDiv{
+  width: 100%;
+}
+
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------
+the carousel on index page
+--------------------------------------------------------*/
+  .carousel-inner .carousel-item.active,
+  .carousel-inner .carousel-item-next,
+  .carousel-inner .carousel-item-prev {
+      display: flex;
+}
+
+.carousel{
+  position: relative;
+  max-width: 1200px;
+}
+
+
+.carousel span{
+  color: #27AE60 !important;
+  font-size: 30px;
+  }
+  .carousel span:hover{
+    color: black !important;
+    font-size: 32px;
+  }
+
+.carouselHClass{
+  color: whitesmoke;
+}
+
+
+.field-speciality-div{
+  width: 100%;
+  display: flex;
+  grid-gap: 10px;
+}
+.field-speciality-block1{
+  display: block;
+  width: 19%;
+  border-right: 1px solid gainsboro;
+  padding: 10px;
+  height: 170px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.field-speciality-block1 img{
+  height: 80px;
+  width: 80px;
+  margin-top: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+  padding: 2px;
+}
+
+.field-speciality-block2{
+  display: block;
+  padding: 10px;
+  width: auto;
+  height: 100px;
+  width: 78%;
+  text-align: left;
+}
+
+.field-speciality-div h5{
+  color: gray !important;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.field-speciality-div h5 i{
+  color: black;
+  margin-top: -5px;
+}
+.card h2{
+ color: #d35400;
+ font-weight: 400;
+ font-size: 13px;
+ text-transform: uppercase;
+}
+
+
+
+.field-speciality-div a{
+  padding: 5px;
+}
+
+.field-speciality-div p{
+  color: #248bf5;
+  font-weight: 400;
+  font-size: 17px;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.field-speciality-div p i{
+  color: #000;
+  font-weight: 200;
+  font-size: 10px;
+  margin-top: -1px;
+  position: absolute;
+}
+
+
+
+  .carousel-item>div{
+    min-width: 530px !important;
+    max-width: 530px !important;
+    background-color: ghostwhite !important;
+   height: 210px;
+    margin-right: 20px;
+    border-radius: 15px !important;
+    border: 1px solid whitesmoke;
+  }
+
+
+
+
+/*on tabs */
+  @media (max-width: 767px) {
+    .carousel-item>div{
+      min-width: 490px !important;
+      max-width: 490px !important;
+    }
+
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+@media (max-width: 545px){
+  .carousel-item>div{
+    min-width: 100% !important;
+    max-width: 490px !important;
+  }
+  .carousel{
+    padding-left: 0px;
+    padding-right: 0px;
+    min-width: 295px;
+  }
+}
+
+@media (max-width: 420px){
+  .field-speciality-div{
+    display: block;
+  }
+  .carousel-item img{
+    display: none;
+  }
+  .field-speciality-block1{display: none;} .field-speciality-block2{width: 100%;} 
+  
+  .field-speciality-div p{
+    margin-bottom: -1px;
+  }
+}
+
+

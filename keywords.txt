@@ -1,0 +1,64 @@
+DOCTORS
+near me, medical, nursing, health, hospital, dental,dentist, kenya, nairobi
+
+Transport
+near me, transport,logistics, construction, carrier, trailer, sand, driver
+
+IT
+near me, nairobi, software, it, technician, data, 
+
+survey
+near me, land, surveyor, plot, land surveyor, map, geo location, road survey, road
+
+law
+near me, nairobi, good, lawyer, advocate, magistrate,legal, legal advisor
+
+saloon
+near me, nairobi, beauty, manicure, pedicure, nails, hair
+
+plumbing
+near me, nairobi, pipes, pipeman, water
+
+accounts
+near me, finance, accountant, accounts, mathematician, money, financial advisor
+
+welding
+metal, near me, door, windows, metalic welding
+
+exhauster
+near me, nairobi, cheap, exhauster services, waste carrier, waste management
+
+business
+near me, business analyst, business advisor, business planner, enterprenuer
+
+tour guide
+near me, nairobi, kenya, cheap, adveture, tours, tour guide, vacation
+
+interior design
+interior designers, deco, interior beauty, kenya, nairobi, house designers, house finishing, near me
+
+building
+hardware, supplier, sand, concrete, cement, timber, architect, good, masson,
+
+events
+event planner, part planner, wedding planner, graduation, funeral planner, tents, chairs, seats
+
+psychology
+psychologist, psychiatrist, advisor, mental health, counsellor, near me
+
+carpentry
+hardware, timber, near me, kenya, cheap, free delivery, delivery, building materials, construction materials, sofa sets, table, dining table, near me, nice sofa, nice chars, carpenter, experienced carpenter
+
+insurance
+
+insurance brokers, near me, trusted, health insurance, property insurance, car insurance, insurance kenya, insurance nairobi, insurance company
+
+mechanics
+mechanics in kenya, mechanic near me, mechanical engineer, car mechanic, vehicle mechanic, engine mechanic, trusted mechanic, 
+
+electronics
+elsectronics, electrical engineer, wiring person, electricity, engineer, cable, trusted wiring
+
+civil
+civil engineers, engineers in kenya, architect, architecture, road engineer, building engineer, construction engineer, 
+
